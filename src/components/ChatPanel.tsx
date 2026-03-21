@@ -69,6 +69,7 @@ export function ChatPanel({ onReflect, reflectionText }: ChatPanelProps) {
         </div>
         <button
           onClick={onReflect}
+          data-onboarding="reflect-button"
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-reflect text-reflect-foreground text-xs font-medium hover:opacity-90 transition-opacity active:scale-95"
         >
           <Sparkles className="w-3.5 h-3.5" />
