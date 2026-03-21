@@ -38,6 +38,7 @@ export default function SandboxPage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [finishReflection, setFinishReflection] = useState("");
   const [showOnboarding, setShowOnboarding] = useState(!isViewMode);
+  const [onboardingSignal, setOnboardingSignal] = useState<string | null>(null);
   const historyRef = useRef<PlacedObject[][]>([[]]);
   const historyIndexRef = useRef(0);
 
