@@ -59,7 +59,7 @@ export function SandboxSidebar() {
       </nav>
 
       <div className="p-3 hidden lg:block">
-        <div className="rounded-lg bg-secondary/60 p-3">
+        <div className="rounded-lg bg-secondary p-3">
           <p className="text-xs text-muted-foreground leading-relaxed">
             A quiet space for reflection and self-discovery.
           </p>
