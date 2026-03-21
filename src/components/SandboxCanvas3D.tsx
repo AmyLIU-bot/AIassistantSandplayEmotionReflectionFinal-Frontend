@@ -1483,6 +1483,7 @@ function SceneContent({
         ref={controlsRef}
         makeDefault
         enabled={mode === "camera"}
+        target={[0, -0.5, 0]}
         minPolarAngle={0.3}
         maxPolarAngle={Math.PI / 2.2}
         minDistance={3}
