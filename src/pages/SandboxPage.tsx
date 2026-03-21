@@ -181,6 +181,7 @@ export default function SandboxPage() {
             onUpdateObject={handleUpdateObject}
             onRemoveObject={handleRemoveObject}
             onDropNew={handleDropNew}
+            onTerrainChanged={() => { if (showOnboarding) setOnboardingSignal("terrain-changed"); }}
           />
 
           {!isViewMode && (
