@@ -7,6 +7,7 @@ import { CanvasToolbar } from "@/components/CanvasToolbar";
 import { ReflectionModal } from "@/components/ReflectionModal";
 import AppSidebar from "@/components/AppSidebar";
 import { saveReflection } from "@/lib/reflections";
+import { saveSession } from "@/lib/sandboxSessions";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
