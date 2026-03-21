@@ -1558,7 +1558,8 @@ export function SandboxCanvas3D({ objects, onUpdateObject, onRemoveObject, onDro
     >
       <Canvas
         shadows
-        camera={{ position: [4, 5, 6], fov: 45 }}
+        camera={{ position: [4, 3.5, 6], fov: 45 }}
+        onCreated={({ camera }) => { camera.lookAt(0, -0.5, 0); }}
         style={{ background: "linear-gradient(180deg, #c8dce8 0%, #e8dcc8 60%, #d4b896 100%)" }}
       >
         <SceneContent
