@@ -90,10 +90,10 @@ const Index = () => {
         </div>
 
         {/* Content grid */}
-        <div className="flex-1 min-h-0 px-4 md:px-8 lg:px-12 py-4 lg:py-6">
-          <div className="w-full max-w-6xl mx-auto h-full grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-6 lg:gap-10 items-start lg:overflow-hidden">
+        <div className="flex-1 min-h-0 px-4 md:px-8 lg:px-12 py-3 lg:py-4">
+          <div className="w-full max-w-6xl mx-auto h-full grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 items-stretch lg:overflow-hidden">
             {/* Left side */}
-            <div className="relative h-full overflow-y-auto pr-2 space-y-4 pb-4">
+            <div className="relative h-full overflow-y-auto pr-2 space-y-3 pb-3">
               <div className="absolute -inset-4 -z-10 rounded-3xl backdrop-blur-sm" style={{ background: 'linear-gradient(135deg, hsl(140 20% 97% / 0.45), hsl(140 20% 97% / 0.25))' }} />
 
               <div className="space-y-3">
@@ -118,7 +118,7 @@ const Index = () => {
               </div>
 
               {/* Demo video placeholder */}
-              <div className="animate-fade-in-up animation-delay-400 rounded-2xl border border-border/50 bg-card/40 backdrop-blur-sm overflow-hidden flex items-center justify-center" style={{ aspectRatio: '16/9', maxHeight: '35vh' }}>
+              <div className="animate-fade-in-up animation-delay-400 rounded-2xl border border-border/50 bg-card/40 backdrop-blur-sm overflow-hidden flex items-center justify-center" style={{ aspectRatio: '16/9', maxHeight: '28vh' }}>
                 <div className="text-center space-y-2 text-muted-foreground">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                     <svg className="w-5 h-5 text-primary ml-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
