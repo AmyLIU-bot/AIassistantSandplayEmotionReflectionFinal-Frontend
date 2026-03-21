@@ -21,6 +21,7 @@ interface SandboxCanvas3DProps {
   onUpdateObject: (id: string, updates: Partial<PlacedObject>) => void;
   onRemoveObject: (id: string) => void;
   onDropNew: (type: string, image: string, x: number, y: number) => void;
+  onTerrainChanged?: () => void;
 }
 
 // Map object types to 3D shapes and colors
