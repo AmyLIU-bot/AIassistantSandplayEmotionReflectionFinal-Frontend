@@ -74,7 +74,8 @@ export default function SandboxPage() {
       pushHistory(next);
       return next;
     });
-  }, [isViewMode]);
+    if (showOnboarding) setOnboardingSignal("object-moved");
+  }, [isViewMode, showOnboarding]);
 
   const handleRemoveObject = useCallback((id: string) => {
     if (isViewMode) return;
