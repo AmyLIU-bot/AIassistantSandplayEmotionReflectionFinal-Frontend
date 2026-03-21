@@ -1490,7 +1490,7 @@ function SceneContent({
 }
 
 /* ───── Main Canvas Component ───── */
-export function SandboxCanvas3D({ objects, onUpdateObject, onRemoveObject, onDropNew }: SandboxCanvas3DProps) {
+export function SandboxCanvas3D({ objects, onUpdateObject, onRemoveObject, onDropNew, onTerrainChanged }: SandboxCanvas3DProps) {
   const [selected, setSelected] = useState<string | null>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [mode, setMode] = useState<"camera" | "object">("object");
