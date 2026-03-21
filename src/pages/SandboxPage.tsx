@@ -215,7 +215,10 @@ export default function SandboxPage() {
       />
 
       {showOnboarding && !isViewMode && (
-        <SandboxOnboarding onComplete={() => setShowOnboarding(false)} />
+        <SandboxOnboarding
+          onComplete={() => setShowOnboarding(false)}
+          signal={onboardingSignal}
+        />
       )}
     </div>
   );
