@@ -107,6 +107,7 @@ function Object3D({
   terrainState: TerrainState;
 }) {
   const meshRef = useRef<THREE.Group>(null);
+  const [hovered, setHovered] = useState(false);
   const config = getConfig(obj.type);
   const baseY = (config.height || 0.4) / 2;
 
@@ -1259,6 +1260,8 @@ function Object3D({
           e.stopPropagation();
           onSelect();
         }}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
         onPointerDown={(e) => {
           e.stopPropagation();
           onSelect();
@@ -1274,12 +1277,13 @@ function Object3D({
             <meshBasicMaterial color="#5a9a7a" transparent opacity={0.6} side={THREE.DoubleSide} />
           </mesh>
         )}
-        {/* Label */}
-        <Html position={[0, -baseY - 0.1, 0]} center distanceFactor={5} style={{ pointerEvents: "none" }}>
-          <span className="text-[9px] text-muted-foreground bg-card/80 px-1.5 py-0.5 rounded whitespace-nowrap backdrop-blur-sm">
-            {obj.type}
-          </span>
-        </Html>
+        {(hovered || isSelected) && (
+          <Html position={[0, -baseY - 0.1, 0]} center distanceFactor={5} style={{ pointerEvents: "none" }}>
+            <span className="text-[9px] text-muted-foreground bg-card/80 px-1.5 py-0.5 rounded whitespace-nowrap backdrop-blur-sm">
+              {obj.type}
+            </span>
+          </Html>
+        )}
       </group>
     </group>
   );
