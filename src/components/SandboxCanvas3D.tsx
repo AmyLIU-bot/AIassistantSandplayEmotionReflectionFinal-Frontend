@@ -1619,8 +1619,8 @@ export function SandboxCanvas3D({ objects, onUpdateObject, onRemoveObject, onDro
 
         {/* Camera buttons — compact single row */}
         <div className="bg-card/90 backdrop-blur-sm rounded-md border border-border/50 shadow-sm p-0.5 flex items-center gap-px">
-          <button onClick={() => controlsRef.current?.dollyIn(1.3)} className={btnClass} title="Zoom in"><ZoomIn size={12} /></button>
-          <button onClick={() => controlsRef.current?.dollyOut(1.3)} className={btnClass} title="Zoom out"><ZoomOut size={12} /></button>
+          <button onClick={() => controlsRef.current?.dollyOut(1.3)} className={btnClass} title="Zoom in"><ZoomIn size={12} /></button>
+          <button onClick={() => controlsRef.current?.dollyIn(1.3)} className={btnClass} title="Zoom out"><ZoomOut size={12} /></button>
           <div className="w-px h-4 bg-border/40 mx-px" />
           <button onClick={() => { if (controlsRef.current) { controlsRef.current.setAzimuthalAngle(controlsRef.current.getAzimuthalAngle() - 0.4); controlsRef.current.update(); } }} className={btnClass} title="Rotate left"><RotateCcw size={12} /></button>
           <button onClick={() => { if (controlsRef.current) { controlsRef.current.setAzimuthalAngle(controlsRef.current.getAzimuthalAngle() + 0.4); controlsRef.current.update(); } }} className={btnClass} title="Rotate right"><RotateCw size={12} /></button>
