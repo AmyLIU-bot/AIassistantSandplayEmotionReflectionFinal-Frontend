@@ -22,7 +22,7 @@ export default function SandboxPage() {
   const [reflectionText, setReflectionText] = useState<string | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [finishReflection, setFinishReflection] = useState("");
-  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [showOnboarding, setShowOnboarding] = useState(true);
   const historyRef = useRef<PlacedObject[][]>([[]]);
   const historyIndexRef = useRef(0);
   const navigate = useNavigate();
