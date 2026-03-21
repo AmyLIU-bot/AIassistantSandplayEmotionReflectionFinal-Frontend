@@ -1483,6 +1483,7 @@ function SceneContent({
         ref={controlsRef}
         makeDefault
         enabled={mode === "camera"}
+        target={[0, -0.5, 0]}
         minPolarAngle={0.3}
         maxPolarAngle={Math.PI / 2.2}
         minDistance={3}
@@ -1558,7 +1559,8 @@ export function SandboxCanvas3D({ objects, onUpdateObject, onRemoveObject, onDro
     >
       <Canvas
         shadows
-        camera={{ position: [4, 5, 6], fov: 45 }}
+        camera={{ position: [4, 3.5, 6], fov: 45 }}
+        onCreated={({ camera }) => { camera.lookAt(0, -0.5, 0); }}
         style={{ background: "linear-gradient(180deg, #c8dce8 0%, #e8dcc8 60%, #d4b896 100%)" }}
       >
         <SceneContent
@@ -1638,7 +1640,7 @@ export function SandboxCanvas3D({ objects, onUpdateObject, onRemoveObject, onDro
           <button onClick={() => { if (controlsRef.current) { controlsRef.current.target.x -= 0.5; controlsRef.current.update(); } }} className={btnClass} title="Pan left"><ArrowLeft size={12} /></button>
           <button onClick={() => { if (controlsRef.current) { controlsRef.current.target.x += 0.5; controlsRef.current.update(); } }} className={btnClass} title="Pan right"><ArrowRight size={12} /></button>
           <div className="w-px h-4 bg-border/40 mx-px" />
-          <button onClick={() => { if (controlsRef.current) { controlsRef.current.target.set(0, 0, 0); controlsRef.current.object.position.set(4, 5, 6); controlsRef.current.update(); } }} className={btnClass} title="Reset"><Home size={12} /></button>
+          <button onClick={() => { if (controlsRef.current) { controlsRef.current.target.set(0, -0.5, 0); controlsRef.current.object.position.set(4, 3.5, 6); controlsRef.current.update(); } }} className={btnClass} title="Reset"><Home size={12} /></button>
         </div>
       </div>
 
