@@ -118,17 +118,17 @@ const Index = () => {
             <div className="animate-fade-in-up animation-delay-200 flex flex-col items-center justify-center lg:items-start gap-5">
               <div className="flex items-center gap-4">
                 <h2
-                  className="text-4xl md:text-5xl font-bold tracking-tight"
+                  className="text-2xl md:text-3xl font-bold tracking-tight"
                   style={{ fontFamily: 'var(--font-display)', color: 'hsl(150 15% 12%)' }}
                 >
                   Get Started
                 </h2>
                 <button
                   onClick={() => navigate("/login")}
-                  className="group w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 ease-out"
+                  className="group w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 ease-out"
                   aria-label="Get Started"
                 >
-                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>
               <p className="text-sm font-medium max-w-[220px] text-center lg:text-left text-foreground/70 drop-shadow-sm">
