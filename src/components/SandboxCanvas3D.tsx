@@ -1260,6 +1260,8 @@ function Object3D({
           e.stopPropagation();
           onSelect();
         }}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
         onPointerDown={(e) => {
           e.stopPropagation();
           onSelect();
