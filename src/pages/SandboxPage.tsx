@@ -1,5 +1,6 @@
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { SandboxCanvas3D, type PlacedObject } from "@/components/SandboxCanvas3D";
+import { SandboxOnboarding, isOnboardingCompleted } from "@/components/SandboxOnboarding";
 import { ObjectBar } from "@/components/ObjectBar";
 import { ChatPanel } from "@/components/ChatPanel";
 import { CanvasToolbar } from "@/components/CanvasToolbar";
@@ -21,9 +22,16 @@ export default function SandboxPage() {
   const [reflectionText, setReflectionText] = useState<string | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [finishReflection, setFinishReflection] = useState("");
+  const [showOnboarding, setShowOnboarding] = useState(false);
   const historyRef = useRef<PlacedObject[][]>([[]]);
   const historyIndexRef = useRef(0);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isOnboardingCompleted()) {
+      setShowOnboarding(true);
+    }
+  }, []);
 
   const pushHistory = (next: PlacedObject[]) => {
     const newHistory = historyRef.current.slice(0, historyIndexRef.current + 1);
@@ -142,6 +150,10 @@ export default function SandboxPage() {
         onClose={() => setModalOpen(false)}
         onSave={handleSaveReflection}
       />
+
+      {showOnboarding && (
+        <SandboxOnboarding onComplete={() => setShowOnboarding(false)} />
+      )}
     </div>
   );
 }
