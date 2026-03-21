@@ -30,7 +30,7 @@ export function SandboxSidebar() {
       </div>
 
       {/* Nav */}
-      <nav className="flex-1 py-4 px-2 space-y-1">
+      <nav className="flex-1 py-4 px-2 space-y-1" style={{ fontFamily: 'var(--font-body)' }}>
         {navItems.map(({ icon: Icon, label, desc, route }) => {
           const isActive = label === "Sandbox";
           return (
