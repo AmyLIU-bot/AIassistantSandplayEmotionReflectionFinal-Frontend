@@ -184,6 +184,21 @@ export default function SandboxPage() {
             onTerrainChanged={() => { if (showOnboarding) setOnboardingSignal("terrain-changed"); }}
           />
 
+          {/* AI Reflection panel in view mode */}
+          {isViewMode && viewingSession?.reflection && (
+            <div className="rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <Sparkles className="w-4 h-4 text-primary/70" />
+                <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                  AI Reflection
+                </h3>
+              </div>
+              <p className="text-sm leading-relaxed text-foreground/85">
+                {viewingSession.reflection}
+              </p>
+            </div>
+          )}
+
           {!isViewMode && (
             <>
               <CanvasToolbar
