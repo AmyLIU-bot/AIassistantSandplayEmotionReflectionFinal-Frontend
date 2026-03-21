@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import DashboardLayout from "@/components/DashboardLayout";
 import EmotionalStatus from "@/components/EmotionalStatus";
 import RecentActivity from "@/components/RecentActivity";
-import ProfileSection from "@/components/ProfileSection";
+
 import { Sparkles } from "lucide-react";
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
