@@ -131,7 +131,7 @@ const Index = () => {
       {/* ===== CONTENT SECTION — What is a Sandbox ===== */}
       <section ref={contentRef} className="relative z-10 py-28 md:py-40 px-6">
         <div className="max-w-[1400px] mx-auto">
-          <div className="rounded-3xl bg-card/60 backdrop-blur-md border border-border/40 shadow-card p-8 md:p-14 space-y-10">
+          <ScrollSection className="rounded-3xl bg-card/60 backdrop-blur-md border border-border/40 shadow-card p-8 md:p-14 space-y-10">
             <div className="space-y-4 max-w-4xl mx-auto text-center">
               <h2 className="animate-fade-in-up animation-delay-100 text-4xl md:text-5xl lg:text-7xl font-bold leading-tight tracking-tight" style={{ fontFamily: 'var(--font-display)', color: 'hsl(150 15% 12%)' }}>
                 What is a Sandbox?
