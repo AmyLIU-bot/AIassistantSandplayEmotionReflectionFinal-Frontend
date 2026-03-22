@@ -20,21 +20,21 @@ const HomePage = () => {
       <motion.div variants={container} initial="hidden" animate="show" className="space-y-6">
         <motion.div variants={item}>
           <p className="text-sm text-muted-foreground">Welcome back</p>
-          <h1 className="text-2xl font-bold text-foreground">Hello, {name} 🌿</h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-2xl font-bold text-foreground">Hello, {name} 🌿</h1>
+            <button
+              onMouseEnter={() => setPlanHover(true)}
+              onMouseLeave={() => setPlanHover(false)}
+              onClick={() => navigate("/payments")}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border/50 bg-card text-xs font-medium text-foreground transition-all duration-200 hover:border-primary/40 hover:shadow-md active:scale-[0.97]"
+            >
+              <Crown className="w-3.5 h-3.5 text-primary" />
+              <span className="transition-all duration-200">
+                {planHover ? "Click to upgrade" : "Free Plan"}
+              </span>
+            </button>
+          </div>
           <p className="text-sm text-muted-foreground mt-1">Take a breath. You're doing great today.</p>
-
-          <button
-            onMouseEnter={() => setPlanHover(true)}
-            onMouseLeave={() => setPlanHover(false)}
-            onClick={() => navigate("/payments")}
-            className="mt-3 inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-border/50 bg-card text-sm font-medium text-foreground transition-all duration-200 hover:border-primary/40 hover:shadow-md active:scale-[0.97]"
-            style={{ boxShadow: "var(--shadow-card)" }}
-          >
-            <Crown className="w-4 h-4 text-primary" />
-            <span className="transition-all duration-200">
-              {planHover ? "Click to upgrade" : "Free Plan"}
-            </span>
-          </button>
         </motion.div>
 
         <motion.div variants={item}>
