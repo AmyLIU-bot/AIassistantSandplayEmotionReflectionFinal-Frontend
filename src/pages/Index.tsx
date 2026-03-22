@@ -196,7 +196,7 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <div className="rounded-2xl border border-border bg-card/95 backdrop-blur-md p-10 space-y-6 shadow-card">
+              <div className="rounded-2xl border border-destructive/25 bg-card/95 backdrop-blur-md p-10 space-y-6" style={{ boxShadow: '0 4px 20px -4px hsl(150 20% 40% / 0.10)' }}>
                 <h4 className="text-sm font-semibold uppercase tracking-wider" style={{ color: 'hsl(150 8% 40%)' }}>Typical personality tests</h4>
                 <ul className="space-y-4">
                   {["Answer pre-set questions", "You guess the \"right\" answer", "Results feel flat and clinical"].map((text) => (
