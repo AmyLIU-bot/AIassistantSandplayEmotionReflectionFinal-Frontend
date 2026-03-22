@@ -112,14 +112,14 @@ const Index = () => {
           </div>
 
           {/* Bridge block */}
-          <div className="text-center space-y-4 max-w-xl mx-auto">
-            <p className="text-lg text-muted-foreground" style={{ fontFamily: 'var(--font-body)' }}>
+          <div className="text-center space-y-5 max-w-xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground drop-shadow-sm" style={{ fontFamily: 'var(--font-body)' }}>
               Whatever brought you here — you don't need the right words.
             </p>
-            <p className="text-xl font-semibold text-primary" style={{ fontFamily: 'var(--font-display)' }}>
+            <p className="text-xl md:text-2xl font-semibold text-primary drop-shadow-sm" style={{ fontFamily: 'var(--font-display)' }}>
               The sandbox will find them for you.
             </p>
-            <Button onClick={() => navigate("/login")} className="mt-2 gap-2">
+            <Button onClick={() => navigate("/login")} className="mt-3 gap-2 text-base px-6 py-3">
               Try it now <ArrowRight className="w-4 h-4" />
             </Button>
           </div>
