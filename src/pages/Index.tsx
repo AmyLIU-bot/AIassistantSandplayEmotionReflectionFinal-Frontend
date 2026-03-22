@@ -81,7 +81,7 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="border-primary/30 bg-card/95 backdrop-blur-md shadow-card">
+              <Card className="border-primary/30 bg-card/95 backdrop-blur-md" style={{ boxShadow: '0 4px 20px -4px hsl(150 20% 40% / 0.10)' }}>
                 <CardContent className="p-10 space-y-5">
                   <p className="text-lg md:text-xl italic leading-relaxed" style={{ fontFamily: 'var(--font-body)', color: 'hsl(150 10% 15%)' }}>
                     "I'm fine, I think. But lately something feels… off. I just can't put my finger on it."
