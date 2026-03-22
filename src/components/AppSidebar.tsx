@@ -20,6 +20,7 @@ const mainItems = [
 const AppSidebar = () => {
   const [expanded, setExpanded] = useState(false);
   const [accountOpen, setAccountOpen] = useState(true);
+  const [sandboxOpen, setSandboxOpen] = useState(true);
   const location = useLocation();
 
   return (
