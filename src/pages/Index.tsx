@@ -268,16 +268,16 @@ const Index = () => {
       </section>
 
       {/* ===== SECTION 4 — HOW IT WORKS ===== */}
-      <section className="relative z-10 py-20 md:py-28 px-6">
-        <div className="max-w-[1400px] mx-auto space-y-12">
-          <div className="text-center space-y-4 max-w-2xl mx-auto">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">How it works</p>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight text-foreground" style={{ fontFamily: 'var(--font-display)' }}>
+      <section className="relative z-10 py-24 md:py-36 px-6">
+        <div className="max-w-[1400px] mx-auto space-y-16">
+          <div className="text-center space-y-5 max-w-3xl mx-auto">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary drop-shadow-sm">How it works</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground drop-shadow-sm" style={{ fontFamily: 'var(--font-display)' }}>
               Three steps. One honest reflection.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 items-start max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start max-w-5xl mx-auto">
             {[
               {
                 step: "1",
@@ -295,16 +295,20 @@ const Index = () => {
                 desc: "Submit your scene and our AI will read the arrangement and deliver a personal reflection in seconds.",
               },
             ].map((s, i) => (
-              <div key={s.step} className="relative flex flex-col items-center text-center px-6 py-4">
+              <div key={s.step} className="relative flex flex-col items-center text-center">
                 {/* Connector line */}
                 {i < 2 && (
                   <div className="hidden md:block absolute top-8 left-[calc(50%+28px)] w-[calc(100%-56px)] h-px bg-border" />
                 )}
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 relative z-10">
-                  <span className="text-lg font-bold text-primary" style={{ fontFamily: 'var(--font-display)' }}>{s.step}</span>
+                <div className="w-16 h-16 rounded-full bg-primary/15 flex items-center justify-center mb-5 relative z-10">
+                  <span className="text-xl font-bold text-primary" style={{ fontFamily: 'var(--font-display)' }}>{s.step}</span>
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2" style={{ fontFamily: 'var(--font-display)' }}>{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>{s.desc}</p>
+                <Card className="bg-card/90 backdrop-blur-md shadow-card w-full">
+                  <CardContent className="p-8 space-y-3 text-center">
+                    <h3 className="text-xl font-bold text-card-foreground" style={{ fontFamily: 'var(--font-display)' }}>{s.title}</h3>
+                    <p className="text-base text-muted-foreground leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>{s.desc}</p>
+                  </CardContent>
+                </Card>
               </div>
             ))}
           </div>
