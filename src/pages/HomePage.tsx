@@ -22,6 +22,19 @@ const HomePage = () => {
           <p className="text-sm text-muted-foreground">Welcome back</p>
           <h1 className="text-2xl font-bold text-foreground">Hello, {name} 🌿</h1>
           <p className="text-sm text-muted-foreground mt-1">Take a breath. You're doing great today.</p>
+
+          <button
+            onMouseEnter={() => setPlanHover(true)}
+            onMouseLeave={() => setPlanHover(false)}
+            onClick={() => navigate("/payments")}
+            className="mt-3 inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-border/50 bg-card text-sm font-medium text-foreground transition-all duration-200 hover:border-primary/40 hover:shadow-md active:scale-[0.97]"
+            style={{ boxShadow: "var(--shadow-card)" }}
+          >
+            <Crown className="w-4 h-4 text-primary" />
+            <span className="transition-all duration-200">
+              {planHover ? "Click to upgrade" : "Free Plan"}
+            </span>
+          </button>
         </motion.div>
 
         <motion.div variants={item}>
