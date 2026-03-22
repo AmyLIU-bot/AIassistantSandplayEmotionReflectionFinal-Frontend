@@ -203,36 +203,36 @@ const Index = () => {
       </section>
 
       {/* ===== SECTION 3 — WHY PLACING OBJECTS ===== */}
-      <section className="relative z-10 py-20 md:py-28 px-6">
-        <div className="max-w-[1400px] mx-auto space-y-12">
-          <div className="text-center space-y-4 max-w-2xl mx-auto">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">Why placing objects?</p>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight text-foreground" style={{ fontFamily: 'var(--font-display)' }}>
+      <section className="relative z-10 py-24 md:py-36 px-6">
+        <div className="max-w-[1400px] mx-auto space-y-16">
+          <div className="text-center space-y-5 max-w-3xl mx-auto">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary drop-shadow-sm">Why placing objects?</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground drop-shadow-sm" style={{ fontFamily: 'var(--font-display)' }}>
               Your hands are more honest than your words.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="bg-card/60 backdrop-blur-sm shadow-none">
-              <CardContent className="p-6 space-y-3">
-                <h3 className="text-lg font-bold text-foreground" style={{ fontFamily: 'var(--font-display)' }}>The unconscious speaks</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="bg-card/90 backdrop-blur-md shadow-card">
+              <CardContent className="p-8 space-y-4">
+                <h3 className="text-xl font-bold text-card-foreground" style={{ fontFamily: 'var(--font-display)' }}>The unconscious speaks</h3>
+                <p className="text-base text-muted-foreground leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
                   What you pick and where you place it isn't consciously decided — which is exactly why it reveals something real.
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-card/60 backdrop-blur-sm shadow-none">
-              <CardContent className="p-6 space-y-3">
-                <h3 className="text-lg font-bold text-foreground" style={{ fontFamily: 'var(--font-display)' }}>No words required</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+            <Card className="bg-card/90 backdrop-blur-md shadow-card">
+              <CardContent className="p-8 space-y-4">
+                <h3 className="text-xl font-bold text-card-foreground" style={{ fontFamily: 'var(--font-display)' }}>No words required</h3>
+                <p className="text-base text-muted-foreground leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
                   Struggling to explain how you feel? You don't have to. The arrangement does the talking for you.
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-card/60 backdrop-blur-sm shadow-none">
-              <CardContent className="p-6 space-y-3">
-                <h3 className="text-lg font-bold text-foreground" style={{ fontFamily: 'var(--font-display)' }}>AI reads it instantly</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+            <Card className="bg-card/90 backdrop-blur-md shadow-card">
+              <CardContent className="p-8 space-y-4">
+                <h3 className="text-xl font-bold text-card-foreground" style={{ fontFamily: 'var(--font-display)' }}>AI reads it instantly</h3>
+                <p className="text-base text-muted-foreground leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
                   Placement patterns, object choices, use of space — our AI processes all of it and surfaces a meaningful insight in seconds.
                 </p>
               </CardContent>
@@ -240,24 +240,24 @@ const Index = () => {
           </div>
 
           {/* Comparison block */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-sm p-6 space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="rounded-2xl border border-border bg-card/90 backdrop-blur-md p-8 space-y-5 shadow-card">
               <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Typical personality tests</h4>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {["Answer pre-set questions", "You guess the \"right\" answer", "Results feel flat and clinical"].map((text) => (
-                  <li key={text} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <X className="w-4 h-4 mt-0.5 text-destructive shrink-0" />
+                  <li key={text} className="flex items-start gap-3 text-base text-muted-foreground">
+                    <X className="w-4 h-4 mt-1 text-destructive shrink-0" />
                     <span>{text}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border-2 border-primary/30 bg-card/60 backdrop-blur-sm p-6 space-y-4">
+            <div className="rounded-2xl border-2 border-primary/30 bg-card/90 backdrop-blur-md p-8 space-y-5 shadow-card">
               <h4 className="text-sm font-semibold uppercase tracking-wider text-primary">This experience</h4>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {["Move freely, follow your instinct", "No right or wrong answers", "AI speaks to you, not at you"].map((text) => (
-                  <li key={text} className="flex items-start gap-2 text-sm text-foreground">
-                    <Check className="w-4 h-4 mt-0.5 text-primary shrink-0" />
+                  <li key={text} className="flex items-start gap-3 text-base text-card-foreground">
+                    <Check className="w-4 h-4 mt-1 text-primary shrink-0" />
                     <span>{text}</span>
                   </li>
                 ))}
