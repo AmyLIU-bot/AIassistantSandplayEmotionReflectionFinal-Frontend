@@ -274,7 +274,7 @@ const Index = () => {
                 </Card>
               </div>
             ))}
-          </div>
+          </ScrollSection>
           </div>
         </div>
       </section>
