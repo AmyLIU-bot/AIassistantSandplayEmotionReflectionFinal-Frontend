@@ -277,6 +277,30 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* ===== GET STARTED — Bottom CTA ===== */}
+      <section className="relative z-10 py-28 md:py-40 px-6">
+        <div className="max-w-[1400px] mx-auto flex flex-col items-center justify-center gap-5">
+          <div className="flex items-center gap-4">
+            <h2
+              className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-primary via-emerald-500 to-teal-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-[shimmer_3s_ease-in-out_infinite] drop-shadow-lg"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
+              Get Started
+            </h2>
+            <button
+              onClick={() => navigate("/login")}
+              className="group w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 ease-out"
+              aria-label="Get Started"
+            >
+              <ArrowRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
+            </button>
+          </div>
+          <p className="text-base font-semibold max-w-[250px] text-center bg-gradient-to-r from-foreground/80 to-primary/90 bg-clip-text text-transparent drop-shadow-md">
+            Begin your emotional journey
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
