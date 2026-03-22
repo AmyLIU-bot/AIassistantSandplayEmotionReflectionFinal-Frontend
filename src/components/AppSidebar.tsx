@@ -12,6 +12,7 @@ const accountSubItems = [
 const sandboxSubItems: { title: string; path: string; icon: typeof Home }[] = [];
 
 const mainItems = [
+  { title: "Payments", path: "/payments", icon: Coins },
   { title: "Contact Us", path: "/contact", icon: Mail },
 ];
 
