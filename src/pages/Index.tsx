@@ -58,7 +58,11 @@ const Index = () => {
 
       {/* ===== HERO SECTION ===== */}
       <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6">
-        <div className="text-center space-y-10 md:space-y-14 animate-fade-in-up">
+        <div
+          ref={heroRef}
+          className="text-center space-y-10 md:space-y-14 animate-fade-in-up will-change-transform"
+          style={{ ...heroStyle, transition: 'none' }}
+        >
           <div className="flex items-center justify-center gap-3 mb-2">
             <div className="w-14 h-14 rounded-2xl bg-card/80 backdrop-blur-sm flex items-center justify-center shadow-md">
               <Leaf className="w-7 h-7 text-primary" />
