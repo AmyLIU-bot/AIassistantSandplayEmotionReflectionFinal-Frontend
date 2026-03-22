@@ -123,7 +123,7 @@ const Index = () => {
             <Button onClick={() => navigate("/login")} className="mt-3 gap-2 text-base px-6 py-3">
               Try it now <ArrowRight className="w-4 h-4" />
             </Button>
-          </div>
+          </ScrollSection>
           </div>
         </div>
       </section>
